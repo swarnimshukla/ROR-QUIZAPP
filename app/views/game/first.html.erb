@@ -1,0 +1,27 @@
+<h1>Quiz Questions</h1>
+<form action="/game/submit" id='submit' method="post"> 
+	<input type="radio" name='sub' checked="checked" value="<%= @button_id %>" style="display:none" > 
+	</br>
+	</br>
+	<input type="radio" name='index' checked="checked" value=" 0 " style="display:none"> 
+	<br>
+	<br>
+	
+	<font size="7"><%= @questions[0].question.html_safe %></font>	
+	<br>
+
+	<br>	
+	<input type="checkbox" name='choice1' value='<%= @questions[0].option1 %>' > <font size="4"><%= @questions[0].option1 %></font>
+	<br>
+	<br>
+	<input type="checkbox" name='choice2' value='<%= @questions[0].option2 %>' > <font size="4"><%= @questions[0].option2 %></font>
+	<br>
+	<br>
+	<input type="checkbox" name='choice3' value='<%= @questions[0].option3 %>' > <font size="4"><%= @questions[0].option3 %></font>
+	<br>
+	<br>
+	<input type="checkbox" name='choice4	' value='<%= @questions[0].option4 %>' ><font size="4"> <%= @questions[0].option4 %></font>
+	<br>
+	<br>
+</form>
+<input type="submit" form="submit" value="submit" ></button>
